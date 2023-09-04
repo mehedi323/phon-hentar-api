@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+  <title>Hunting Phone</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <header>
+    <h1 class="text-6xl text-rose-600 font-bold font text-center border p-4 bg-purple-200 rounded-full  my-8">Hunting Phone API</h1>
+  </header>
+  <main class="container mx-auto">
+    <section class="search text-center">
+      <input id="search-field" type="text" placeholder="Search here" class="input input-bordered w-full max-w-xs" />
+      <button onclick="handleSearch()" class="btn btn-secondary">Search</button>
+    </section>
+    <section>
+      <div id="loading-spinner" class="text-center my-40 hidden">
+        <span class="loading loading-spinner loading-md"></span>
+      </div>
+      <div id="card-container" class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+      </div>
+      <div id="show-all-container" class="hidden text-center my-4 ">
+        <button class="btn btn-warning ">Show All</button>
+      </div>
+    </section>
+
+    <!-- show details modal -->
+    <!-- Open the modal using ID.showModal() method -->
+
+    <dialog id="show_modal_details" class="modal modal-bottom sm:modal-middle">
+    <form method="dialog" class="modal-box">
+    <h3 class="font-bold text-lg">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+    <!-- if there is a button in form, it will close the modal -->
+    <button class="btn">Close</button>
+    </div>
+    </form>
+    </dialog>
+  </main>
+  <footer>
+  <h1></h1>
+  </footer>
+  <script src="script/main.js"></script>
+ 
+</body>
+</html>
